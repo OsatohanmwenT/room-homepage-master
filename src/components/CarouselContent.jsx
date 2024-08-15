@@ -19,7 +19,8 @@ function CarouselContent({ currentIndex, handleNext, handlePrev, data }) {
     }, [currentIndex]);
 
     return(
-        <div className="grid grid-cols-5 max-md:grid-cols-1 max-md:grid-rows-2">
+        <div className="grid grid-cols-5 grid-rows-1 max-md:grid-cols-1 max-md:grid-rows-2">
+            <CarouselBtn handleNext={handleNext} handlePrev={handlePrev} />
             <div
                 className={`col-span-3 w-full h-full transition-opacity duration-150 ease-in-out ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
                 <img src={imageMap[imageSrc]} alt="hero image" className="w-full h-full" />
@@ -35,7 +36,7 @@ function CarouselContent({ currentIndex, handleNext, handlePrev, data }) {
                 </p>
                 <ShowBtn />
             </div>
-            <CarouselBtn handleNext={handleNext} handlePrev={handlePrev} />
+            
         </div>
     )
 }

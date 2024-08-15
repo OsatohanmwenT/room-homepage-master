@@ -3,7 +3,7 @@ import nextIcon from "../assets/images/icon-angle-right.svg"
 
 export default function CarouselBtn({ handlePrev, handleNext }) {
     return(
-        <div className="absolute bg-Black flex flex-1  items-center justify-self-end self-end left-[60%] max-sm:left-auto ">
+        <div className="absolute bg-Black flex flex-1 justify-self-end self-end left-[60%] items-center  max-sm:left-auto ">
             <button onClick={handlePrev}>
               <img className="p-5 px-[2.2rem] bg-Black hover:bg-Very-Dark-Gray" src={prevIcon} alt="previous icon"/>
             </button>
